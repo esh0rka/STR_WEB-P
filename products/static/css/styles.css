@@ -1,0 +1,345 @@
+header {
+  background-color: #fff;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #007bff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  padding: 10px 30px;
+  margin: 6px;
+  height: 20px;
+}
+
+.menu-button {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 10px 4px;
+  color: black;
+}
+
+.profile-button {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 10px;
+  padding: 10px 7px;
+  color: black;
+  background-color: #89C2FFFF;
+  border-radius: 10px;
+}
+
+.profile-button:hover {
+  background-color: #dde5ff;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+}
+
+.menu-button:hover {
+  background-color: #dde5ff;
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-left {
+    display: flex;
+}
+
+.menu-left li {
+  margin-right: 20px;
+}
+
+.menu-left a {
+    text-decoration: none;
+}
+
+.menu-right {
+  display: flex;
+}
+
+.menu-right li {
+  margin-left: 20px;
+}
+
+.menu-right a {
+    text-decoration: none;
+}
+
+/* Стили для логотипа */
+.logo {
+  flex-grow: 1; /* Расширяет логотип, чтобы занять все доступное пространство */
+    text-align: center; /* Выравнивание логотипа по центру */
+}
+
+.logo img {
+    max-width: 20%;
+    height: auto;
+}
+
+.submenu {
+  position: absolute;
+  display: none;
+  top: 45px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.menu-link:hover + .submenu,
+.submenu:hover {
+  display: block;
+}
+
+.submenu a {
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: #333;
+}
+
+.submenu a:hover {
+  background-color: #f0f0f0;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+.sort-button {
+  position: absolute;
+  border: 0;
+  padding: 3px;
+  margin-top: 4px;
+  border-radius: 6px;
+  background-color: cornflowerblue;
+  margin-right: 0;
+}
+
+.contant-shop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.search-input {
+  border: 0.5px solid #ccc;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 3px;
+  margin-right: 0;
+  padding: 5px;
+  width: 187px;
+}
+
+.search-product {
+  margin-bottom: 4px;
+}
+
+.search-button {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 0;
+  padding: 5px;
+  margin-left: 0;
+  background-color: cornflowerblue
+}
+
+.articul-label {
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+  font-size: 13px;
+}
+
+.sort-list select {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 6px;
+  background-color: #eaf2f8;
+}
+
+.sort-list select:hover {
+  background-color: #edf7ff;
+}
+
+.sort-list {
+  margin-top: 17px;
+  width: 200px;
+  padding: 2px;
+  margin-left: 3px;
+  margin-bottom: 15px;
+}
+
+.sort-list option {
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+}
+
+.data-body {
+  display: flex;
+  margin-left: 40px;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+}
+
+.product-link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.cart-button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin: 0px;
+  line-height: 0.9;
+  text-decoration: none;
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+  font-size: 14px;
+  background-color: rgb(182, 213, 253);
+  color: black;
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.delete-cart-button {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  margin: 0px;
+  line-height: 0.9;
+  text-decoration: none;
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+  font-size: 14px;
+  background-color: rgb(252, 78, 78);
+  color: black;
+  padding: 6px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.delete-cart-button:hover {
+  background-color: rgb(255, 135, 135);
+}
+
+.cart-button:hover {
+  background-color: rgb(195, 236, 255);
+}
+
+.product-card-wrapper {
+  position: relative;
+  border: 1px solid rgb(192, 203, 216);
+  border-radius: 5px;
+  width: 220px;
+  height: 250px;
+  padding: 0;
+}
+
+.product-img-container {
+  width: auto;
+  height: 70%;
+  overflow: hidden;
+  margin: 1px;
+  text-align: center;
+}
+
+.product-img-container img {
+  width: auto;
+  height: 100%;
+}
+
+.product-info {
+  margin: 7px 5px 5px 7px;
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+}
+
+.product-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.product-supplier {
+  font-size: 13px;
+  color: #8f8f8f;
+  padding: 2px 0 2px 0;
+}
+
+.product-name {
+  font-size: 14px;
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-list {
+  width: 228px;
+  padding: 2px;
+  margin: 0;
+  font-family: system,-apple-system,BlinkMacSystemFont,'Segoe UI','Segoe WP',Roboto,Ubuntu,Oxygen,Cantarell,'Fira Sans','Helvetica Neue',Helvetica,'Lucida Grande','Droid Sans',Tahoma,'Microsoft Sans Serif',sans-serif;
+
+}
+
+.bigger-text {
+  font-size: 20px;
+  margin-left: 4px;
+  margin-top: 20px;
+}
+
+.categories {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.categories a {
+  text-decoration: none;
+  color: black;
+}
+
+.categories li {
+  padding: 9px;
+  border-radius: 6px;
+}
+
+.selected-category {
+  background-color:cornflowerblue
+
+}
