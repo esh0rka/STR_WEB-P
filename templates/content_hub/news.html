@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <body>
+    <main>
+      <section>
+        <font size="4" color="blue" face="Arial">
+          <h1>Список новостных статей:</h1>
+        </font>
+        {% for article in articles %}
+        <article>
+          <font face="Arial">
+            <h2>{{ article.title }}</h2>
+            <img src="{{ article.image.url }}" alt="Ошибка загрузки изображения." height="220"/>
+            <p>{{ article.short_description }}</p>
+            <p>&nbsp;</p>
+            <a href="{% url 'news'%}{{ article.id }}">Читать далее</a>
+            <time datetime="2023-11-5">{{ article.pub_date }}</time>
+          </font>
+        </article>
+        {% endfor %}
+        <hr />
+      </section>
+    </main>
+  </body>
+
+{% endblock %}

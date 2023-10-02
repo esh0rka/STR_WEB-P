@@ -1,13 +1,18 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Supplier, Product, Purchase, PriceChange, Category
+from content_hub.models import Article
 
 
 def index(request):
-    num_products = Product.objects.all().count()
+    last_article = Article.objects.latest('pub_date')
 
     return render(
         request,
-        'index.html'
+        'products/index.html',
+        context=
+        {
+            'last_article': last_article,
+        }
     )
 
 
@@ -38,7 +43,7 @@ def catalog_view(request):
 
     return render(
         request,
-        'catalog.html',
+        'products/catalog.html',
         context=
         {'products': products,
          'query': query,
@@ -55,7 +60,7 @@ def product_list_by_category(request, category_slug):
     categories = Category.objects.all()
 
     return render(request,
-                  'catalog.html',
+                  'products/catalog.html',
                   {'category': category,
                    'products': products,
                    'categories': categories,

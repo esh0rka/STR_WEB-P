@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<main>
+      <article>
+        <font size="4" face="Arial">
+          <h1>{{ title }}</h1>
+        </font>
+        <font face="Arial">
+          <img
+            src="{{ image.url }}"
+            alt="Ошибка загрузки изображения."
+            height="300"
+          />
+          {{ content|safe }}
+          <p>&nbsp;</p>
+          <p>Дата публикации:</p>
+          <time datetime="2023-11-5">{{ pub_date }}</time>
+        </font>
+      </article>
+      <p>&nbsp;</p>
+      <a href="{% url 'news' %}">Вернуться назад</a>
+</main>
+{% endblock %}

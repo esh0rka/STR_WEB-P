@@ -1,0 +1,21 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<h2>Register</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" id="register-button" disabled>Register</button>
+</form>
+<script>
+    const confirmAgeCheckbox = document.querySelector('#id_confirm_age');
+    const registerButton = document.querySelector('#register-button');
+    confirmAgeCheckbox.addEventListener('change', function() {
+        if (confirmAgeCheckbox.checked) {
+            registerButton.disabled = false;
+        } else {
+            registerButton.disabled = true;
+        }
+    });
+</script>
+{% endblock %}

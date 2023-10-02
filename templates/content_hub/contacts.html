@@ -1,0 +1,72 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <main>
+      <table border="1">
+        <caption><h2>Сотрудники магазина</h2></caption>
+        <tr>
+          <th></th>
+          <th>ФИО</th>
+          <th>Должность</th>
+          <th>Контакты</th>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo1.png" width="120" alt="Фото." /></td>
+          <td><p>Гайкевич Егор Владимирович</p></td>
+          <td><p>Генеральный директор</p></td>
+          <td>
+            <p>
+              Рабочий телефон: +375(29)426-34-75<br />
+              Почта: egaikevich@zooshop.by
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo2.png" width="120" alt="Фото." /></td>
+          <td><p>Иванова Екатерина Валерьевна</p></td>
+          <td><p>Менеджер по продажам</p></td>
+          <td>
+            <p>
+              Рабочий телефон: +375(44)515-34-37<br />
+              Почта: mprod@zooshop.by
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo3.png" width="120" alt="Фото." /></td>
+          <td><p>Петров Андрей Александрович</p></td>
+          <td><p>Ветеринарный специалист</p></td>
+          <td>
+            <p>
+              Почта: apteka@zooshop.by
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo4.png" width="120" alt="Фото." /></td>
+          <td><p>Гончарова Мария Александровна</p></td>
+          <td><p>Логист</p></td>
+          <td>
+            <p>
+              Почта: logisth@zooshop.by
+            </p>
+          </td>
+        </tr>
+        <tr align="center">
+          <td colspan="4">Лучшие сотрудники</td>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo6.png" width="120" alt="Фото." /></td>
+          <td colspan="3"><p>Берта</p></td></td>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo5.png" width="120" alt="Фото." /></td>
+          <td colspan="3"><p>Пушок</p></td></td>
+        </tr>
+        <tr>
+          <td><img src="{{ URL_MEDIA }}contacts/photo7.png" width="120" alt="Фото." /></td>
+          <td colspan="3"><p>Вуди</p></td></td>
+        </tr>
+      </table>
+    </main>
+{% endblock %}

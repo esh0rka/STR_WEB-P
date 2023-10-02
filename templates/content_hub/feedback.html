@@ -1,0 +1,30 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<main>
+      <p>
+          В нашем зоо<wbr />магазине разнообразно<br>
+          Все для домашних пушистых друзей.<br>
+          Здесь пусть каждый найдет своё счастье,<br>
+          Подарки для пушистых – в этом магазине!
+        </p>
+
+      <section>
+        <font size="4" color="blue" face="Arial">
+          <h1>Отзывы:</h1>
+        </font>
+        <a href="{% if user.is_authenticated %} {% url 'account' %} {% else %} {% url 'registration' %} {% endif %}">Добавить свой отзыв</a>
+        {% for review in reviews %}
+        <article>
+          <font face="Arial">
+            <h2>{{ review.user.username }}</h2>
+            <p>{{ review.text }}</p>
+            <font color="red"><p>Оценка: {{ review.rating }}</p></font>
+            <time datetime="2023-11-5" align="right">{{ review.date }}</time>
+          </font>
+        </article>
+        <hr />
+        {% endfor %}
+      </section>
+    </main>
+{% endblock %}

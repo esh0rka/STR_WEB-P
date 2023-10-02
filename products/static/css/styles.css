@@ -56,14 +56,11 @@ nav {
     justify-content: space-between;
 }
 
-ul {
+.menu-left {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-}
-
-.menu-left {
-    display: flex;
 }
 
 .menu-left li {
@@ -76,6 +73,9 @@ ul {
 
 .menu-right {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-right li {

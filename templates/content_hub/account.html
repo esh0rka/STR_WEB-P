@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <form method="post" action="{% url 'account' %}">
+        {% csrf_token %}
+        Оценка: 1
+        <input type="range" name="range" min="1" max="5" />
+        5 <br />
+        Отзыв:
+        <textarea name="comment"></textarea><br />
+        <input type="submit" name="btn2" value="Отправить" /><br />
+        <input type="hidden" name="user" value="{% if user.is_authenticated %} {{user.get_username}} {% else %} -1NONE {% endif %}"/>
+      </form>
+{% endblock %}

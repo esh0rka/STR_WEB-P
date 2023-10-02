@@ -5,6 +5,7 @@ class Supplier(models.Model):
     name = models.CharField(max_length=200)
     address = models.TextField()
     mobile_phone = models.CharField(max_length=15)
+    image = models.ImageField(upload_to='supplier_icons/', null=True, blank=True)
 
     def __str__(self):
         return self.name
