@@ -1,14 +1,27 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <form method="post" action="{% url 'account' %}">
+<div class="wrapper">
+    <div class="base-main">
+        <main>
+    <form id="review" method="post" action="{% url 'account' %}">
         {% csrf_token %}
+        <span>
         Оценка: 1
         <input type="range" name="range" min="1" max="5" />
-        5 <br />
+        5 </span><br />
         Отзыв:
         <textarea name="comment"></textarea><br />
+        <select name="account" form="review">
+            <option value="1">{% if user.is_authenticated %} {{user.get_username}} {% else %} -1NONE {% endif %}</option>
+            <option value="2">Анонимно</option>
+        </select>
         <input type="submit" name="btn2" value="Отправить" /><br />
-        <input type="hidden" name="user" value="{% if user.is_authenticated %} {{user.get_username}} {% else %} -1NONE {% endif %}"/>
-      </form>
+        <input type="hidden" name="user" value="{% if user.is_authenticated %}{{user.get_username}}{% else %}-1NONE{% endif %}"/>
+    </form>
+    <a href="https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D0%BD%D1%84%D0%B8%D0%B4%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C" target="frm" class="dow-button">Загрузить политику конфиденциальности</a>
+    <iframe name="frm" width="500" height="350">Old browser</iframe>
+</main>
+</div>
+</div>
 {% endblock %}

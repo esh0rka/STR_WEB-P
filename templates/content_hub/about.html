@@ -1,14 +1,26 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<main>
-      <img src="{{ URL_MEDIA }}ZooShopLogo.jpg" alt="Лого" width="10%" />
-      <a href="#information">Информация о компании</a>
-      <a href="#history">История по годам</a>
-      <a href="#rekv">Реквизиты</a>
-      <section>
+
+<div class="wrapper">
+  <div class="vertical-nav-wrapper">
+    <div class="vertical-nav-button">
+      <label>☰</label>
+    </div>
+    <nav class="dropdown-vertical-nav">
+      <img src="{{ URL_MEDIA }}ZooShopLogo.jpg" alt="Лого" width="10%" /><br />
+      <ul>
+        <li><a href="#information">Информация о компании</a></li>
+        <li><a href="#history">История по годам</a></li>
+        <li><a href="#rekv">Реквизиты</a>
+      </ul>
+    </nav>
+  </div class="vertical-nav-wrapper">
+  <div class="base-main">
+    <main>
+      <section class="section-wrap">
         <h1 id="information">Информация о нашей компании:</h1>
-        <p>
+        <p class="company-info">
           Наша компания <em>"Zoo Shop"</em> - это место, где мы разделяем вашу
           страсть к заботе о домашних пушистых и пернатых друзьях. Мы являемся
           ведущими поставщиками кормов, витаминов, аксессуаров и других товаров
@@ -27,7 +39,7 @@
           видов домашних животных, включая собак, кошек, птиц, грызунов, рыб и
           рептилий. Мы предлагаем:
         </p>
-        <ul>
+        <ul class="assort-list">
           <li>
             <u>Корма высокого качества</u>: Мы тщательно подбираем только лучшие
             бренды кормов, чтобы вашим питомцам не пропало ни одного важного
@@ -44,39 +56,41 @@
             питомца более веселой и удобной.
           </li>
         </ul>
-        <video controls loop width="380" height="240">
-          <source src="{{ URL_MEDIA }}videos/ZooShopVideo.mp4" type="video/mp4" />
-          <source src="{{ URL_MEDIA }}videos/ZooShopVideo.webp" type="video/webm" />
+        <video controls loop width="auto" height="240">
+          <source src="{{ URL_MEDIA }}videos/ZooShopVideo.mp4"
+            type="video/mp4" />
+          <source src="{{ URL_MEDIA }}videos/ZooShopVideo.webp"
+            type="video/webm" />
         </video>
       </section>
-      <section>
+      <section class="section-wrap">
         <h1 id="history">История по годам:</h1>
-        <ul type="square">
+        <ul class="history-list">
           <li>
-            <p><b>2005</b>: Начало пути</p>
+            <b>2005</b>: Начало пути
           </li>
           <p>
-            &nbsp; &nbsp; &nbsp; В 2005 году наша история началась с маленького
+            В 2005 году наша история началась с маленького
             магазина для зоолюбителей. Мы стартовали с небольшого ассортимента
             товаров для домашних животных и одной главной цели - делать жизнь
             питомцев и их хозяев счастливее. Наша страсть к животным стала
             основой нашего бизнеса.
           </p>
           <li>
-            <p><b>2010</b>: Рост и расширение</p>
+            <b>2010</b>: Рост и расширение
           </li>
           <p>
-            &nbsp; &nbsp; &nbsp; С каждым годом наша компания росла, добавляя
+            С каждым годом наша компания росла, добавляя
             новые бренды и продукты в наш ассортимент. Мы начали предлагать
             широкий выбор кормов, аксессуаров и витаминов, чтобы удовлетворить
             потребности всех видов домашних животных. Наше сообщество клиентов
             также росло, и мы ценили каждого, кто выбирал нас.
           </p>
           <li>
-            <p><b>2015</b>: Ответственность и качество</p>
+            <b>2015</b>: Ответственность и качество
           </li>
           <p>
-            &nbsp; &nbsp; &nbsp; В 2015 году мы внедрили строгие стандарты
+            В 2015 году мы внедрили строгие стандарты
             качества и безопасности для всех наших товаров. Мы сотрудничаем
             только с надежными поставщиками и брендами, чтобы уверенно
             предоставлять вам лучшие продукты для ваших питомцев. Наша команда
@@ -84,10 +98,10 @@
             животными.
           </p>
           <li>
-            <p><b>2020</b>: Мы идем в ногу со временем</p>
+            <b>2020</b>: Мы идем в ногу со временем
           </li>
           <p>
-            &nbsp; &nbsp; &nbsp; В 2020 году мы запустили наш онлайн-магазин,
+            В 2020 году мы запустили наш онлайн-магазин,
             чтобы сделать покупки удобными и доступными для всех. Мы также
             начали предоставлять услуги доставки, чтобы облегчить жизнь наших
             клиентов. В этот период особенно важной стала наша миссия
@@ -95,14 +109,13 @@
             пандемии.
           </p>
           <li>
-            <p><b>Сегодня</b>: Наше обещание</p>
+            <b>Сегодня</b>: Наше обещание
           </li>
           <p>
-            &nbsp; &nbsp; &nbsp; Сегодня "Zoo Shop" остается приверженным своей
+            Сегодня "Zoo Shop" остается приверженным своей
             миссии -
-            <strong
-              >предоставлять лучшие товары и услуги для ваших питомцев.</strong
-            >
+            <strong>предоставлять лучшие товары и услуги для ваших
+              питомцев.</strong>
             Мы гордимся тем, что помогаем вам создавать счастливые и здоровые
             дома для ваших любимцев. Наша команда по-прежнему растет и
             развивается, чтобы обеспечивать вас надежными решениями для ухода за
@@ -116,18 +129,51 @@
           удивительное путешествие.
         </p>
       </section>
-      <section>
+      <section class="section-wrap">
         <h1 id="rekv">Наши реквизиты:</h1>
-        <p>Юридическое наименование: ООО "Зоо Шоп"</p>
-        <address>
-          Юридический и почтовый адрес: г. Минск, ул. Гикало, 9<br />
-          Телефон: +375 (29) 565-65-66<br />
-          Email: main@zooshop.by<br />
-          Руководитель: Гайкевич Егор Владимирович
-        </address>
-        <figure>
-          <img src="{{ URL_MEDIA }}sertifikat.webp" alt="Фото сертификата" width="350" />
-          <figcaption>Наш сертификат</figcaption>
+        <div itemscope itemtype="http://schema.org/LocalBusiness">
+          <address itemprop="address" itemscope
+            itemtype="http://schema.org/PostalAddress"
+            class="address">
+            <p itemprop="legalName">ООО "Зоо Шоп"</p>
+            <p>Юридический и почтовый адрес: <span itemprop="streetAddress">г.
+                Минск, ул. Гикало, 9</span></p>
+            <p>Телефон: <span itemprop="telephone">+375 (29) 565-65-66</span>
+            </p>
+            <p>Email: <a href="mailto:main@zooshop.by"
+                itemprop="email">main@zooshop.by</a></p>
+            <p>Руководитель: <span itemprop="founder">Гайкевич Егор
+                Владимирович</span></p>
+          </address>
+        </div>
+        <figure id="certificate" class="certificate">
+          <h1>Сертификат</h1>
+          <p>Настоящим удостоверяется, что</p>
+          <h2>ООО "Зоо Шоп"</h2>
+          <p>является официальным владельцем и администратором веб-сайта</p>
+          <h3>ZooShop.by</h3>
+          <p>в течение срока действия данного сертификата.</p>
+          <p>Сертификат выдан 01.01.2015 и действителен до 01.01.2025.</p>
+          <p>Этот сертификат подтверждает, что ООО "Зоо Шоп" обладает всеми
+            необходимыми правами и полномочиями на управление и содержание
+            ZooShop.by.</p>
+          <div class="off-data">
+            <div class="upoln">
+              <p><em>Подпись уполномоченного лица</em></p>
+              <p itemprop="name"><strong>Гайкевич Е.В.</strong></p>
+              <p>Владелеца <strong>ООО "Зоо Шоп"</strong></p>
+            </div>
+            <div class="facsimilie">
+              <img src="https://power.org.ua/images/izgotovlenie-faksimile.png"
+                class="podpis">
+              <img src="https://abali.ru/wp-content/uploads/2011/04/pechat.png"
+                class="pechat">
+            </div>
+          </div>
+          <p class="podtverzdenie">Для подтверждения действительности этого сертификата, пожалуйста,
+            посетите
+            наш веб-сайт ZooShop.by или свяжитесь с нами по телефону <a
+              href="tel:+375295656566">+375 (29) 565-65-66</a>.</p>
         </figure>
       </section>
       <p>
@@ -137,4 +183,7 @@
         сотрудничества.
       </p>
     </main>
+  </div>
+</div>
+
 {% endblock %}

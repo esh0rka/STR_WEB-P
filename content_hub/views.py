@@ -101,11 +101,14 @@ def account_view(request):
         rate = request.POST.get('range')
         text = request.POST.get('comment')
         username = request.POST.get('user')
-        if username != ' -1NONE ':
+        account = request.POST.get('account')
+        if username != '-1NONE':
+            if account == '2':
+                username = 'Анонимно'
             new_feedback = Review(
                 rating=rate,
                 text=text,
-                user=User.objects.get(username=username[1:-1])
+                user=User.objects.get(username=username)
             )
             new_feedback.save()
 

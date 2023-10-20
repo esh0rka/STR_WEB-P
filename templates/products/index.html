@@ -1,66 +1,63 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <aside style="float: right; width: 30%;">
-      <img
-        src="media/baner.png"
-        alt="Изображение не загружено."
-        width="100%"
-      />
-    </aside>
+
+<aside style="float: right; width: 30%; position: fixed; right: 0;" class="baner-index">
+  <a href="http://www.petfood.com" target="_blank"><img
+      src="{{ URL_MEDIA }}baner.png" alt="Изображение не загружено."
+      width="100%" />
+    <div class="baner-ball"></div>
+  </a>
+</aside>
+<div class="wrapper">
+  <div class="base-main">
     <main style="margin-right: 35%;">
-      <section>
+      <section class="article-section">
         <font size="4" color="blue" face="Arial">
           <h1>Последняя опубликованная статья:</h1>
         </font>
-        <article>
+        <article class="article-wrapper">
           <font face="Arial">
             <h2>{{ last_article.title }}</h2>
-            <img
-              src="{{ last_article.image.url }}"
-              alt="Ошибка загрузки изображения."
-              height="220"
-            />
+            <img src="{{ last_article.image.url }}"
+              alt="Ошибка загрузки изображения." height="220" />
             <p>{{ last_article.short_description }}</p>
             <a href="{% url 'news'%}{{ last_article.id }}">Читать полностью</a>
-            <time datetime="2023-11-5" align="right">{{ last_article.pub_date }}</time>
+            <time datetime="{{ last_article.pub_date|date:" Y-m-d" }}">
+              {{ last_article.pub_date|date:"d.m.Y" }}</time>
           </font>
         </article>
       </section>
-      <section>
+      <section class="company-section">
         <h2>Список компаний партнёров:</h2>
-        <ul>
-          <li>
-            <img
-              src="media/supplier_icons/icon1.png"
-              alt="Icon error."
-              height="40"
-              width="40"
-            />
-            <p>&nbsp;БелЗоо</p>
-            <a href="https://belzoo.by">BelZoo.by</a>
-          </li>
-          <li>
-            <img
-              src="media/supplier_icons/icon2.jpg"
-              alt="Icon error."
-              height="40"
-              width="40"
-            />
-            <p>&nbsp;PURINA ONE</p>
-            <a href="https://purina-one.ru">purina-one.ru</a>
-          </li>
+        <ul class="company-list">
+          <div class="company-block">
             <li>
-            <img
-              src="media/supplier_icons/icon3.png"
-              alt="Icon error."
-              height="40"
-              width="40"
-            />
-            <p>&nbsp;Хвостатые Друзья</p>
-            <a href="https://Hvost-Drug.by">Hvost-Drug.by</a>
-          </li>
+              <img src="{{ URL_MEDIA }}supplier_icons/icon1.png"
+                alt="Icon error." height="40" width="40" />
+              <p>БелЗоо</p>
+              <a href="https://belzoo.by">BelZoo.by</a>
+            </li>
+          </div>
+          <div class="company-block">
+            <li>
+              <img src="{{ URL_MEDIA }}supplier_icons/icon2.jpg"
+                alt="Icon error." height="40" width="40" />
+              <p>PURINA ONE</p>
+              <a href="https://purina-one.ru">purina-one.ru</a>
+            </li>
+          </div>
+          <div class="company-block">
+            <li>
+              <img src="{{ URL_MEDIA }}supplier_icons/icon3.png"
+                alt="Icon error." height="40" width="40" />
+              <p>Хвостатые Друзья</p>
+              <a href="https://Hvost-Drug.by">Hvost-Drug.by</a>
+            </li>
+          </div>
         </ul>
       </section>
     </main>
+  </div>
+</div>
 {% endblock %}
